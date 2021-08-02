@@ -1,0 +1,71 @@
+> attach(TeslaDeaths)
+> 
+> lrTeslaDeath <- lm(`Total Deaths`~ `Tesla driver`+ `Tesla driver`+ `Tesla occupant`+ `Other vehicle`+`Cyclists/ Peds`+`TSLA+cycl / peds`+`AutoPilot claimed`+`Verified Tesla Autopilot Death`)
+> 
+> summary(lrTeslaDeath)
+
+Call:
+lm(formula = `Total Deaths` ~ `Tesla driver` + `Tesla driver` + 
+    `Tesla occupant` + `Other vehicle` + `Cyclists/ Peds` + `TSLA+cycl / peds` + 
+    `AutoPilot claimed` + `Verified Tesla Autopilot Death`)
+
+Residuals:
+     Min       1Q   Median       3Q 
+-0.21426 -0.03419 -0.03082 -0.00144 
+     Max 
+ 0.90473 
+
+Coefficients:
+                                 Estimate
+(Intercept)                       0.09527
+`Tesla driver`                    0.33328
+`Tesla occupant`                  0.38327
+`Other vehicle`                   0.93556
+`Cyclists/ Peds`                  0.29641
+`TSLA+cycl / peds`                0.60565
+`AutoPilot claimed`               0.13008
+`Verified Tesla Autopilot Death` -0.16282
+                                 Std. Error
+(Intercept)                         0.03500
+`Tesla driver`                      0.05138
+`Tesla occupant`                    0.05294
+`Other vehicle`                     0.02828
+`Cyclists/ Peds`                    0.05844
+`TSLA+cycl / peds`                  0.05131
+`AutoPilot claimed`                 0.04502
+`Verified Tesla Autopilot Death`    0.07432
+                                 t value
+(Intercept)                        2.722
+`Tesla driver`                     6.487
+`Tesla occupant`                   7.240
+`Other vehicle`                   33.079
+`Cyclists/ Peds`                   5.072
+`TSLA+cycl / peds`                11.804
+`AutoPilot claimed`                2.889
+`Verified Tesla Autopilot Death`  -2.191
+                                 Pr(>|t|)
+(Intercept)                       0.00720
+`Tesla driver`                   9.91e-10
+`Tesla occupant`                 1.65e-11
+`Other vehicle`                   < 2e-16
+`Cyclists/ Peds`                 1.05e-06
+`TSLA+cycl / peds`                < 2e-16
+`AutoPilot claimed`               0.00439
+`Verified Tesla Autopilot Death`  0.02987
+                                    
+(Intercept)                      ** 
+`Tesla driver`                   ***
+`Tesla occupant`                 ***
+`Other vehicle`                  ***
+`Cyclists/ Peds`                 ***
+`TSLA+cycl / peds`               ***
+`AutoPilot claimed`              ** 
+`Verified Tesla Autopilot Death` *  
+---
+Signif. codes:  
+  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05
+  ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.1574 on 164 degrees of freedom
+Multiple R-squared:  0.8875,	Adjusted R-squared:  0.8827 
+F-statistic: 184.8 on 7 and 164 DF,  p-value: < 2.2e-16
